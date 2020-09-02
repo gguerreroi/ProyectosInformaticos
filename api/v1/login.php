@@ -20,7 +20,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             exit(0);
         }
 
-        if (!$Db->Connect($_REQUEST{'dbUser'}, $_REQUEST['dbPass'])) {
+        if (!$Db->Connect($_REQUEST['dbUser'], $_REQUEST['dbPass'])) {
             echo $ObjectJson->Json(0, 'Fallo de Conexión en la Base de Datos', null);
             exit(0);
         } else {
